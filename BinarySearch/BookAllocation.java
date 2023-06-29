@@ -38,7 +38,7 @@ class BookAllocation {
 
     public static void main(String args[]) {
         /*
-         * Problem Statement:
+         * Problem Statement of Book Allocation:
          * INPUT:
          * Number of Pages in i th book in arr[i]
          * Number of Students -m
