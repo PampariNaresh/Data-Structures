@@ -1,7 +1,10 @@
+import java.util.Arrays;
+
 public class LowerBound {
 
     public static void main(String args[]) {
-        int arr[] = { 2, 3, 9, 5, 10, 4, 5, 5 };
+        int arr[] = { 2, 3, 4, 5, 9, 5, 10, 4, 5, 5 };
+        Arrays.sort(arr);
         int key = 5;
         int low = 0;
         int ans = arr.length;
