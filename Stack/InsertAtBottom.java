@@ -11,7 +11,7 @@ public class InsertAtBottom {
         }
         while (!temp.isEmpty()) {
             int element = temp.peek();
-            System.out.print(element + " ");
+            System.out.println(element + " ");
             temp.pop();
             s.push(element);
         }
