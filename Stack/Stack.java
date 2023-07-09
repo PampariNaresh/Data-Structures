@@ -1,3 +1,4 @@
+
 public class Stack {
     public int top;
     public int Stack[];
