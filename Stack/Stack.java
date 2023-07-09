@@ -11,7 +11,7 @@ public class Stack {
     }
 
     public void push(int element) {
-        if (size - top < 1) {
+        if (size - top < 0) {
             System.out.println("Stack Overflow");
         } else {
             top++;
@@ -59,7 +59,12 @@ public class Stack {
         System.out.println(s.peek());
         System.out.println(s.pop());
         System.out.println(s.peek());
+        System.out.println(s.pop());
+        System.out.println(s.pop());
+        System.out.println(s.pop());
+        System.out.println(s.pop());
         System.out.println(s.isEmpty());
-
+        s.push(10);
+        System.out.println(s.peek());
     }
 }
