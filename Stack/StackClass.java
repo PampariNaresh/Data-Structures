@@ -1,5 +1,6 @@
 import java.util.Stack;
 
+// Using In-Bulit Stack Class 
 public class StackClass {
     public static void main(String args[]) {
         Stack<Integer> s = new Stack<>();
