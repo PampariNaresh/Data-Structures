@@ -1,0 +1,52 @@
+
+import java.util.*;
+
+public class BreadthFirstSearch {
+    public static void addEdge(ArrayList<ArrayList<Integer>> adj, int u, int v) {
+        adj.get(u).add(v);
+        adj.get(v).add(u);
+    }
+
+    public static ArrayList<Integer> bfs(ArrayList<ArrayList<Integer>> adj, boolean vis[], int source,
+            ArrayList<Integer> ans) {
+        Queue<Integer> q = new LinkedList<>();
+        vis[source] = true;
+        q.add(source);
+        while (!q.isEmpty()) {
+            int node = q.poll();
+            ans.add(node);
+            for (int neighbour : adj.get(node)) {
+                if (vis[neighbour] == false) {
+                    vis[neighbour] = true;
+                    q.add(neighbour);
+
+                }
+            }
+        }
+        return ans;
+
+    }
+
+    public static void main(String args[]) {
+        int vertexs = 5;
+        ArrayList<ArrayList<Integer>> adj = new ArrayList<>(vertexs);
+        for (int i = 0; i < vertexs; i++) {
+            adj.add(new ArrayList<>());
+        }
+
+        addEdge(adj, 0, 1);
+        addEdge(adj, 0, 4);
+        addEdge(adj, 1, 2);
+        addEdge(adj, 1, 3);
+        addEdge(adj, 1, 4);
+        addEdge(adj, 2, 3);
+        addEdge(adj, 3, 4);
+
+        boolean vis[] = new boolean[vertexs];
+        ArrayList<Integer> ans = new ArrayList<>();
+        ArrayList<Integer> result = bfs(adj, vis, 0, ans);
+        for (Integer ele : result) {
+            System.out.print(ele + " ");
+        }
+    }
+}

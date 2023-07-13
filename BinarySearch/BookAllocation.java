@@ -1,4 +1,3 @@
-package BinarySearch;
 
 class BookAllocation {
     public static int maxElement(int arr[]) {
